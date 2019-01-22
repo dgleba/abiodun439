@@ -1,0 +1,93 @@
+
+works!
+
+----------------------------------------------------
+Title:  .
+-----------------------2019-01-21[Jan-Mon]11-35AM
+
+https://github.com/abiodunjames/NodeJs-Todo-List.git
+
+https://dev.to/abiodunjames/build-a-todo-app-with-nodejs-expressjs-mongodb-and-vuejs--part-1--29n7
+
+https://dev.to/abiodunjames/build-a-todo-app-with-nodejs-expressjs-mongodb-and-vuejs--part-2--3k11
+
+
+_____________
+
+
+git clone https://github.com/abiodunjames/NodeJs-Todo-List.git abiodun-todo
+
+
+
+albe@vamp398:/srv/test$ git clone https://github.com/abiodunjames/NodeJs-Todo-List.git abiodun-todo
+Cloning into 'abiodun-todo'...
+Checking connectivity... done.
+albe@vamp398:/srv/test$
+
+
+dkup
+
+npm install
+
+npm run build
+
+touch public/favicon.ico
+
+node server.js
+
+
+_____________
+
+
+albe@vamp398:/srv/test/abiodun-todo$ grep -r --exclude-dir={node_modules,tmp,log,vendor} localhos *
+app/Config.js:  DB: 'mongodb://localhost:27020/todos',
+public/src/components/CreateTodo.vue:        let url = 'http://localhost:4000/api/add';
+public/src/components/ListTodo.vue:                let uri = 'http://localhost:4000/api/all';
+public/src/components/ListTodo.vue:                let uri = 'http://localhost:4000/api/update/' + id;
+public/src/components/ListTodo.vue:                let uri = 'http://localhost:4000/api/delete/' + id;
+public/build/bundle.js:      let url = 'http://localhost:4000/api/add';
+public/build/bundle.js:            let uri = 'http://localhost:4000/api/all';
+public/build/bundle.js:            let uri = 'http://localhost:4000/api/update/' + id;
+public/build/bundle.js:            let uri = 'http://localhost:4000/api/delete/' + id;
+Readme.md:Navigate to http://localhost:4000
+server.js:  res.setHeader('Access-Control-Allow-Origin', 'http://localhost:' + port)
+
+_____________
+
+albe@vamp398:/srv/test/abiodun-todo$ grep -r --exclude-dir={node_modules,tmp,log,vendor} DB *
+app/Config.js:  DB: 'mongodb://localhost:27020/todos',
+server.js:mongoose.connect(config.DB)
+
+_____________
+
+replace localhost with 192.168.88.42
+
+_____________
+
+works!
+
+_____________
+
+git diff -- ':!package-lock.json' ':!yarn.lock' ':!bundle.js'
+
+
+git show --pretty="" --name-only bd61ad98
+
+git show --pretty="" --name-only 
+
+_____________
+
+
+albe@vamp398:/srv/test/abiodun-todo$ git show --pretty="" --name-only
+.gitignore
+app/Config.js
+docker-compose.yml
+public/src/components/CreateTodo.vue
+public/src/components/ListTodo.vue
+server.js
+albe@vamp398:/srv/test/abiodun-todo$
+
+
+
+
+----------------------------------------------------
