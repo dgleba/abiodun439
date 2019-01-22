@@ -1,4 +1,4 @@
 module.exports = {
-  DB: 'mongodb://localhost:27017/todos',
+  DB: 'mongodb://192.168.88.42:27020/todos',
   APP_PORT: 4000
 }

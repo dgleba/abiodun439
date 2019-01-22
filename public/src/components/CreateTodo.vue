@@ -35,7 +35,7 @@
       addTodo(event) {
         if (event) event.preventDefault();
   
-        let url = 'http://localhost:4000/api/add';
+        let url = 'http://192.168.88.42:4000/api/add';
         let param = {
           name: this.todo,
           done: 0
