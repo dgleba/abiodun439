@@ -7,7 +7,7 @@ networks:
 
 services: 
      
-  mongo392:
+  mongo439:
     image: mongo:3.6
     # container_name: mongo392
     restart: always
@@ -35,9 +35,25 @@ services:
       - sister 
 
 
+  api:
+  # couch to pg job
+    image: "node:10-slim"
+    restart: always
+    # user: "node"
+    # environment:
+    #   - NODE_ENV=production
+    working_dir: /app
+    volumes:
+      - .:/app
+    ports:
+      - 4000:4000
+    depends_on:
+      - mongo439    
+    #command: sh .env &&  ./bin/index.js     
+    command:  "node server.js"    
+    networks:
+      - sister 
 
-
-      
       
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 

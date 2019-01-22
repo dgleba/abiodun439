@@ -1,6 +1,6 @@
 module.exports = {
 
-  entry: './public/src/main.js',
+  entry: './vue/main.js',
   output: {
     filename: './public/build/bundle.js'
   },

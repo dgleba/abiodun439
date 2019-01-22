@@ -88,6 +88,14 @@ server.js
 albe@vamp398:/srv/test/abiodun-todo$
 
 
+_____________
+
+
+curl  http://localhost:4000/api/all
+
+
+albe@vamp398:/srv/dkr/abiodun439$ curl  http://localhost:4000/api/all
+[{"_id":"5c4674027b38e9661da0ffe3","name":"2019-01-21","done":false,"__v":0},{"_id":"5c46740c7b38e9661da0ffe4","name":"second","done":true,"__v":0},{"_id":"5c467c927cef08010083e4e5","name":"wererer","done":false,"__v":0}]albe@vamp398:/srv/dkr/abiodun439$
 
 
 ----------------------------------------------------
